@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            text-align: center;
+            font-family: 'Cinzel Decorative', cursive;
+            color: #fff;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .image-container img {
+            width: 350px; 
+            height: auto;
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            border: 5px solid rgba(255, 255, 255, 0.6);
+            cursor: pointer; /* Changes cursor to a hand pointer when hovering over the image */
+        }
+
+        .message {
+            font-size: 48px; 
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hidden audio player -->
+    <audio id="song" loop>
+        <source src="yellow.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- Content of the page -->
+    <div class="container">
+        <div class="image-container" onclick="playMusic()">
+            <img src="IMG-20250126-WA0024.jpg" alt="Beautiful Image">
+        </div>
+        <div class="message">
+            YAYY! Thank you, Mayulu! I know you will say YES<br> 
+            I love you so much ❤️
+        </div>
+    </div>
+
+    <script>
+        function playMusic() {
+            var song = document.getElementById("song");
+            song.play(); // Starts playing the music
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            text-align: center;
+            font-family: 'Pacifico', cursive;
+            color: #fff;
+            transition: opacity 0.6s ease-in-out;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1s ease-in-out;
+        }
+        .gif img {
+            width: 250px;
+            border-radius: 15px;
+        }
+        .question {
+            font-size: 32px;
+            margin: 20px 0;
+        }
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .btn {
+            font-size: 22px;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s;
+            font-weight: bold;
+        }
+        .yes {
+            background: #ff4b5c;
+            color: #fff;
+        }
+        .yes:hover {
+            transform: scale(1.15);
+            background: #ff1c40;
+        }
+        .surely {
+            background: #ff9a76;
+            color: #fff;
+        }
+        .surely:hover {
+            transform: scale(1.15);
+            background: #ff6a4a;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+    <script>
+        function goToNextPage() {
+            document.body.style.opacity = '0';
+            setTimeout(() => {
+                window.location.href = "v1.html";
+            }, 600);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="gif">
+            <img src="https://media.tenor.com/zkaB7Dlry8YAAAAi/hug.gif" alt="Cute Hugging Cats GIF">
+        </div>
+        <div class="question">Will You Be My Valentine? ❤️</div>
+        <div class="buttons">
+            <button class="btn yes" onclick="goToNextPage()">Yes</button>
+            <button class="btn surely" onclick="goToNextPage()">Surely Yes</button>
+        </div>
+    </div>
+</body>
+</html>
+
